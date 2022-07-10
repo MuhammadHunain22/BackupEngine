@@ -10,6 +10,8 @@ namespace BackupEngine
             context = new DBContext();
             InitializeComponent();
             UpdateDataGrid();
+            GetBackups();
+            GetRollBacks();
         }
 
         private void Settings_Click(object sender, EventArgs e)
@@ -47,7 +49,28 @@ namespace BackupEngine
                 _ = ex.Message;
             }
         }
-
+        public void GetBackups()
+        {
+            try
+            {
+                BackupsTable.DataSource = context.Get("Backups", "Project", "BackupDate", "Successful");
+            }
+            catch (Exception ex)
+            {
+                _ = ex.Message;
+            }
+        }
+        public void GetRollBacks()
+        {
+            try
+            {
+                RollbackTable.DataSource = context.Get("Rollbacks", "Project", "RollbackDate", "Successful");
+            }
+            catch (Exception ex)
+            {
+                _ = ex.Message;
+            }
+        }
         private void Backup_Click(object sender, EventArgs e)
         {
             var confirmResult = MessageBox.Show("Are you sure you want to start backup ?","Projects Backup" ,MessageBoxButtons.YesNo,MessageBoxIcon.Question);

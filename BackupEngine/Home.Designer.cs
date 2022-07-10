@@ -29,14 +29,32 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Settings = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
             this.Backup = new System.Windows.Forms.Button();
             this.Logo = new System.Windows.Forms.PictureBox();
             this.Projects = new System.Windows.Forms.DataGridView();
             this.RollbackBtn = new System.Windows.Forms.Button();
+            this.HomeTabControl = new System.Windows.Forms.TabControl();
+            this.ProjectsTab = new System.Windows.Forms.TabPage();
+            this.BackupsTab = new System.Windows.Forms.TabPage();
+            this.BackupsTable = new System.Windows.Forms.DataGridView();
+            this.RollbacksTab = new System.Windows.Forms.TabPage();
+            this.RollbackTable = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Projects)).BeginInit();
+            this.HomeTabControl.SuspendLayout();
+            this.ProjectsTab.SuspendLayout();
+            this.BackupsTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BackupsTable)).BeginInit();
+            this.RollbacksTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RollbackTable)).BeginInit();
             this.SuspendLayout();
             // 
             // Settings
@@ -111,12 +129,25 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Projects.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Projects.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Projects.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Projects.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.Projects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Projects.DefaultCellStyle = dataGridViewCellStyle1;
             this.Projects.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Projects.Location = new System.Drawing.Point(12, 98);
+            this.Projects.Location = new System.Drawing.Point(-4, 0);
             this.Projects.Name = "Projects";
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(3);
+            this.Projects.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.Projects.RowTemplate.Height = 25;
-            this.Projects.Size = new System.Drawing.Size(776, 340);
+            this.Projects.Size = new System.Drawing.Size(776, 322);
             this.Projects.TabIndex = 4;
             // 
             // RollbackBtn
@@ -137,14 +168,115 @@
             this.RollbackBtn.UseVisualStyleBackColor = false;
             this.RollbackBtn.Click += new System.EventHandler(this.RollbackBtn_Click);
             // 
+            // HomeTabControl
+            // 
+            this.HomeTabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.HomeTabControl.Controls.Add(this.ProjectsTab);
+            this.HomeTabControl.Controls.Add(this.BackupsTab);
+            this.HomeTabControl.Controls.Add(this.RollbacksTab);
+            this.HomeTabControl.Location = new System.Drawing.Point(12, 92);
+            this.HomeTabControl.Name = "HomeTabControl";
+            this.HomeTabControl.SelectedIndex = 0;
+            this.HomeTabControl.Size = new System.Drawing.Size(776, 346);
+            this.HomeTabControl.TabIndex = 6;
+            // 
+            // ProjectsTab
+            // 
+            this.ProjectsTab.Controls.Add(this.Projects);
+            this.ProjectsTab.Location = new System.Drawing.Point(4, 24);
+            this.ProjectsTab.Name = "ProjectsTab";
+            this.ProjectsTab.Size = new System.Drawing.Size(768, 318);
+            this.ProjectsTab.TabIndex = 0;
+            this.ProjectsTab.Text = "Projects";
+            this.ProjectsTab.UseVisualStyleBackColor = true;
+            // 
+            // BackupsTab
+            // 
+            this.BackupsTab.Controls.Add(this.BackupsTable);
+            this.BackupsTab.Location = new System.Drawing.Point(4, 24);
+            this.BackupsTab.Name = "BackupsTab";
+            this.BackupsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.BackupsTab.Size = new System.Drawing.Size(768, 318);
+            this.BackupsTab.TabIndex = 1;
+            this.BackupsTab.Text = "Backups";
+            this.BackupsTab.UseVisualStyleBackColor = true;
+            // 
+            // BackupsTable
+            // 
+            this.BackupsTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BackupsTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.BackupsTable.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackupsTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BackupsTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.BackupsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.BackupsTable.DefaultCellStyle = dataGridViewCellStyle3;
+            this.BackupsTable.GridColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackupsTable.Location = new System.Drawing.Point(-4, 0);
+            this.BackupsTable.Name = "BackupsTable";
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(3);
+            this.BackupsTable.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.BackupsTable.RowTemplate.Height = 25;
+            this.BackupsTable.Size = new System.Drawing.Size(772, 322);
+            this.BackupsTable.TabIndex = 5;
+            // 
+            // RollbacksTab
+            // 
+            this.RollbacksTab.Controls.Add(this.RollbackTable);
+            this.RollbacksTab.Location = new System.Drawing.Point(4, 24);
+            this.RollbacksTab.Name = "RollbacksTab";
+            this.RollbacksTab.Size = new System.Drawing.Size(768, 318);
+            this.RollbacksTab.TabIndex = 2;
+            this.RollbacksTab.Text = "Rollbacks";
+            this.RollbacksTab.UseVisualStyleBackColor = true;
+            // 
+            // RollbackTable
+            // 
+            this.RollbackTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RollbackTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.RollbackTable.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.RollbackTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.RollbackTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.RollbackTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.RollbackTable.DefaultCellStyle = dataGridViewCellStyle5;
+            this.RollbackTable.GridColor = System.Drawing.SystemColors.ControlLightLight;
+            this.RollbackTable.Location = new System.Drawing.Point(-4, 0);
+            this.RollbackTable.Name = "RollbackTable";
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(3);
+            this.RollbackTable.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.RollbackTable.RowTemplate.Height = 25;
+            this.RollbackTable.Size = new System.Drawing.Size(776, 322);
+            this.RollbackTable.TabIndex = 5;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.HomeTabControl);
             this.Controls.Add(this.RollbackBtn);
-            this.Controls.Add(this.Projects);
             this.Controls.Add(this.Logo);
             this.Controls.Add(this.Backup);
             this.Controls.Add(this.Add);
@@ -152,10 +284,16 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Home";
+            this.Text = "Backup Engine";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Projects)).EndInit();
+            this.HomeTabControl.ResumeLayout(false);
+            this.ProjectsTab.ResumeLayout(false);
+            this.BackupsTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.BackupsTable)).EndInit();
+            this.RollbacksTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.RollbackTable)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -168,5 +306,11 @@
         private PictureBox Logo;
         private DataGridView Projects;
         private Button RollbackBtn;
+        private TabControl HomeTabControl;
+        private TabPage ProjectsTab;
+        private TabPage BackupsTab;
+        private TabPage RollbacksTab;
+        private DataGridView BackupsTable;
+        private DataGridView RollbackTable;
     }
 }
