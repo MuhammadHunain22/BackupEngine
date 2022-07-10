@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "TF8KN7zs6OLdgXDzKIegsiGDLf52o0/RliP9gDZtYmUeBuhMUBhg5Rbvt+zW0lWrzF9n/crNlrcrjbLU8wPvyA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ashar\\source\\repos\\BackupEngine\\BackupEngine\\BackupEngine.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ashar\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.116\\stub.system.data.sqlite.core.netstandard.1.0.116.nupkg.sha512",
+    "C:\\Users\\Ashar\\.nuget\\packages\\system.data.sqlite.core\\1.0.116\\system.data.sqlite.core.1.0.116.nupkg.sha512"
+  ],
+  "logs": []
+}
