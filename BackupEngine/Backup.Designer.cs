@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Backup));
             this.BackupLogList = new System.Windows.Forms.ListBox();
             this.BackupProgress = new System.Windows.Forms.ProgressBar();
             this.ExpLogBackup = new System.Windows.Forms.ListBox();
@@ -76,6 +77,7 @@
             this.Controls.Add(this.ExpLogBackup);
             this.Controls.Add(this.BackupProgress);
             this.Controls.Add(this.BackupLogList);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Backup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Backup";

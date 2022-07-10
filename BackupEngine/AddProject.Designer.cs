@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProject));
             this.AddprojectHeading = new System.Windows.Forms.Label();
             this.ProjectNameLabel = new System.Windows.Forms.Label();
             this.ProjectNameInput = new System.Windows.Forms.TextBox();
@@ -152,6 +153,7 @@
             this.Controls.Add(this.ProjectNameInput);
             this.Controls.Add(this.ProjectNameLabel);
             this.Controls.Add(this.AddprojectHeading);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(400, 400);
             this.MinimumSize = new System.Drawing.Size(400, 400);

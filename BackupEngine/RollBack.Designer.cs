@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RollBack));
             this.ExpLogRollback = new System.Windows.Forms.ListBox();
             this.RollbackProgress = new System.Windows.Forms.ProgressBar();
             this.RollbackLogList = new System.Windows.Forms.ListBox();
@@ -75,6 +76,7 @@
             this.Controls.Add(this.ExpLogRollback);
             this.Controls.Add(this.RollbackProgress);
             this.Controls.Add(this.RollbackLogList);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RollBack";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RollBack";

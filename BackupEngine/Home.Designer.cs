@@ -149,6 +149,7 @@
             this.Controls.Add(this.Backup);
             this.Controls.Add(this.Add);
             this.Controls.Add(this.Settings);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";

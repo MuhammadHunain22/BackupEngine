@@ -295,3 +295,11 @@
 7/10/2022 8:48:18 AM Backup Done Of BacupEngineDebug
 7/10/2022 8:48:18 AM Backup Process End
 7/10/2022 8:48:18 AM Project Backuped 1 of 1
+7/10/2022 10:06:44 AM Starting RollBack
+7/10/2022 10:06:45 AM 0 Projects Found To Rollback
+7/10/2022 10:06:45 AM Rollback Process End
+7/10/2022 10:06:45 AM Project Rollbacked 0 of 0
+7/10/2022 10:16:38 AM Starting Backup
+7/10/2022 10:16:38 AM 0 Projects Found To Backup
+7/10/2022 10:16:38 AM Backup Process End
+7/10/2022 10:16:38 AM Project Backuped 0 of 0

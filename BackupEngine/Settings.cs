@@ -17,7 +17,7 @@ namespace BackupEngine
                 {
                     CheckBox box = new CheckBox();
                     box.Checked = Convert.ToBoolean(table.Rows[i]["IsBackup"]);
-                    box.Width = 120;
+                    box.Width = 260;
                     box.Height = 20;
                     box.Text = table.Rows[i]["ProjectName"].ToString();
                     box.CheckedChanged += new EventHandler(CheckBoxChanged);
