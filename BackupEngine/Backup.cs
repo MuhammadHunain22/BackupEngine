@@ -7,10 +7,12 @@ namespace BackupEngine
     public partial class Backup : Form
     {
         private readonly DBContext context;
+        private readonly Home _home;
 
-        public Backup()
+        public Backup(Home home)
         {
             context = new DBContext();
+            _home = home;
             InitializeComponent();
             StartBackup();
         }
@@ -41,6 +43,7 @@ namespace BackupEngine
                 totalProjectToBackup = projects.Rows.Count;
                 await Parallel.ForEachAsync(projectList, parallelOptions, async (project, token) =>
                 {
+                    bool IsSuccessful = false;
                     try
                     {
                         i++;
@@ -58,7 +61,7 @@ namespace BackupEngine
                         }
 
                         Logger.Log($@"Project {project?.ItemArray[1]?.ToString()} found on {project?.ItemArray[2]?.ToString()}", BackupLogList, LogType.Normal);
-                       
+
                         if (!await Task.Run(() => Directory.Exists(Path.Combine($@"{project?.ItemArray[3]?.ToString()}", $@"{project?.ItemArray[1]?.ToString()}"))))
                         {
                             Logger.Log($"Creating Backup Directory Of {project?.ItemArray[1]?.ToString()}", BackupLogList, LogType.Normal);
@@ -67,6 +70,7 @@ namespace BackupEngine
 
                         Logger.Log($"Start Ziping Of {project?.ItemArray[1]?.ToString()}", BackupLogList, LogType.Normal);
                         await Task.Run(() => ZipFile.CreateFromDirectory($@"{project?.ItemArray[2]?.ToString()}", Path.Combine($@"{project?.ItemArray[3]?.ToString()}", $@"{project?.ItemArray[1]?.ToString()}\{DateTime.UtcNow.ToString("dd-MM-yyyy")}-{project?.ItemArray[1]?.ToString()}.zip")));
+                        IsSuccessful = true;
                         await Task.Run(() => UpdateProgress(i, projectList.Count));
                         Logger.Log($"Ziping Complete Of {project?.ItemArray[1]?.ToString()}", BackupLogList, LogType.Normal);
                         Logger.Log($"Backup Done Of {project?.ItemArray[1]?.ToString()}", BackupLogList, LogType.Normal);
@@ -82,6 +86,11 @@ namespace BackupEngine
                         _ = ex.Message;
                         Logger.Log(ex.Message, ExpLogBackup, LogType.Exception);
                     }
+                    finally
+                    {
+                        int success = IsSuccessful ? 1 : 0;
+                        await Task.Run(() => context.Query($"INSERT INTO Backups(Project,BackupDate,Successful) VALUES('{project?.ItemArray[1]?.ToString()}','{DateTime.Now}',{success})"));
+                    }
                 });
             }
             catch (Exception ex)
@@ -94,7 +103,7 @@ namespace BackupEngine
                 Logger.Log("Backup Process End", BackupLogList, LogType.Normal);
                 Logger.Log($"Project Backuped {ProjectBackuped} of {totalProjectToBackup}", BackupLogList, LogType.Normal);
                 MessageBox.Show("Backup Completed Successfully", "Backup Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                _home.GetBackups();
             }
         }
 

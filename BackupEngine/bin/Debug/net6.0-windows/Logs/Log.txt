@@ -303,3 +303,115 @@
 7/10/2022 10:16:38 AM 0 Projects Found To Backup
 7/10/2022 10:16:38 AM Backup Process End
 7/10/2022 10:16:38 AM Project Backuped 0 of 0
+7/11/2022 6:56:55 AM Starting Backup
+7/11/2022 6:56:55 AM 1 Projects Found To Backup
+7/11/2022 6:56:55 AM Started Backup Of Codat
+7/11/2022 6:56:55 AM Project Codat found on D:\hunain\codatApi\CodatApi\bin\Release\net5.0
+7/11/2022 6:56:55 AM Start Ziping Of Codat
+7/11/2022 6:57:00 AM Ziping Complete Of Codat
+7/11/2022 6:57:00 AM Backup Done Of Codat
+7/11/2022 6:57:00 AM Backup Process End
+7/11/2022 6:57:00 AM Project Backuped 1 of 1
+7/11/2022 6:58:41 AM Starting Backup
+7/11/2022 6:58:41 AM 1 Projects Found To Backup
+7/11/2022 6:58:41 AM Started Backup Of Codat
+7/11/2022 6:58:41 AM Backup Already Exist Of Codat
+7/11/2022 6:58:41 AM Backup Process End
+7/11/2022 6:58:41 AM Project Backuped 0 of 1
+7/11/2022 7:01:06 AM Starting Backup
+7/11/2022 7:01:06 AM 1 Projects Found To Backup
+7/11/2022 7:01:06 AM Started Backup Of Codat
+7/11/2022 7:01:06 AM Project Codat found on D:\hunain\codatApi\CodatApi\bin\Release\net5.0
+7/11/2022 7:01:06 AM Creating Backup Directory Of Codat
+7/11/2022 7:01:06 AM Start Ziping Of Codat
+7/11/2022 7:01:07 AM Ziping Complete Of Codat
+7/11/2022 7:01:07 AM Backup Done Of Codat
+7/11/2022 7:01:07 AM Backup Process End
+7/11/2022 7:01:07 AM Project Backuped 1 of 1
+7/11/2022 7:01:41 AM Starting Backup
+7/11/2022 7:01:41 AM 1 Projects Found To Backup
+7/11/2022 7:01:41 AM Started Backup Of Codat
+7/11/2022 7:01:41 AM Backup Already Exist Of Codat
+7/11/2022 7:01:41 AM Backup Process End
+7/11/2022 7:01:41 AM Project Backuped 0 of 1
+7/11/2022 7:01:58 AM Starting Backup
+7/11/2022 7:01:58 AM 1 Projects Found To Backup
+7/11/2022 7:01:58 AM Started Backup Of Codat
+7/11/2022 7:01:58 AM Backup Already Exist Of Codat
+7/11/2022 7:01:58 AM Backup Process End
+7/11/2022 7:01:58 AM Project Backuped 0 of 1
+7/11/2022 7:03:46 AM Starting Backup
+7/11/2022 7:03:46 AM 1 Projects Found To Backup
+7/11/2022 7:03:46 AM Started Backup Of Codat
+7/11/2022 7:03:46 AM Backup Already Exist Of Codat
+7/11/2022 7:03:46 AM Backup Process End
+7/11/2022 7:03:46 AM Project Backuped 0 of 1
+7/11/2022 7:03:52 AM Starting Backup
+7/11/2022 7:03:52 AM 1 Projects Found To Backup
+7/11/2022 7:03:52 AM Started Backup Of Codat
+7/11/2022 7:03:52 AM Backup Already Exist Of Codat
+7/11/2022 7:03:52 AM Backup Process End
+7/11/2022 7:03:52 AM Project Backuped 0 of 1
+7/11/2022 7:03:59 AM Starting Backup
+7/11/2022 7:03:59 AM 1 Projects Found To Backup
+7/11/2022 7:03:59 AM Started Backup Of Codat
+7/11/2022 7:03:59 AM Backup Already Exist Of Codat
+7/11/2022 7:03:59 AM Backup Process End
+7/11/2022 7:03:59 AM Project Backuped 0 of 1
+7/11/2022 7:04:10 AM Starting Backup
+7/11/2022 7:04:10 AM 1 Projects Found To Backup
+7/11/2022 7:04:10 AM Started Backup Of Codat
+7/11/2022 7:04:10 AM Backup Already Exist Of Codat
+7/11/2022 7:04:10 AM Backup Process End
+7/11/2022 7:04:10 AM Project Backuped 0 of 1
+7/11/2022 7:19:55 AM Starting RollBack
+7/11/2022 7:19:55 AM 1 Projects Found To Rollback
+7/11/2022 7:19:55 AM Started RollBack Of Codat
+7/11/2022 7:19:55 AM Backup File Found Of Codat
+7/11/2022 7:19:55 AM Rollback Dir of Codat found on D:\hunain\codatApi\CodatApi\bin\Release\net5.0
+7/11/2022 7:19:55 AM Start Unziping Of Codat
+7/11/2022 7:19:56 AM Unziping Complete Of Codat
+7/11/2022 7:19:56 AM RollBack Done Of Codat
+7/11/2022 7:19:56 AM Rollback Process End
+7/11/2022 7:19:56 AM Project Rollbacked 1 of 1
+7/11/2022 7:22:07 AM Starting RollBack
+7/11/2022 7:22:07 AM 1 Projects Found To Rollback
+7/11/2022 7:22:07 AM Started RollBack Of Codat
+7/11/2022 7:22:07 AM Backup File Found Of Codat
+7/11/2022 7:22:07 AM Rollback Dir of Codat found on D:\hunain\codatApi\CodatApi\bin\Release\net5.0
+7/11/2022 7:22:07 AM Start Unziping Of Codat
+7/11/2022 7:22:08 AM Unziping Complete Of Codat
+7/11/2022 7:22:08 AM RollBack Done Of Codat
+7/11/2022 7:22:08 AM Rollback Process End
+7/11/2022 7:22:08 AM Project Rollbacked 1 of 1
+7/11/2022 7:34:30 AM Starting RollBack
+7/11/2022 7:34:30 AM 1 Projects Found To Rollback
+7/11/2022 7:34:30 AM Started RollBack Of Codat
+7/11/2022 7:34:30 AM Backup File Found Of Codat
+7/11/2022 7:34:30 AM Rollback Dir of Codat found on D:\hunain\codatApi\CodatApi\bin\Release\net5.0
+7/11/2022 7:34:30 AM Start Unziping Of Codat
+7/11/2022 7:34:31 AM Unziping Complete Of Codat
+7/11/2022 7:34:31 AM RollBack Done Of Codat
+7/11/2022 7:34:31 AM Rollback Process End
+7/11/2022 7:34:31 AM Project Rollbacked 1 of 1
+7/11/2022 7:36:24 AM Starting Backup
+7/11/2022 7:36:24 AM 1 Projects Found To Backup
+7/11/2022 7:36:24 AM Started Backup Of Something
+7/11/2022 7:36:24 AM Project Something found on D:\hunain\azureLogingUpdated\LMSOnboardingApiV3\bin
+7/11/2022 7:36:24 AM Creating Backup Directory Of Something
+7/11/2022 7:36:24 AM Start Ziping Of Something
+7/11/2022 7:36:33 AM Ziping Complete Of Something
+7/11/2022 7:36:33 AM Backup Done Of Something
+7/11/2022 7:36:33 AM Backup Process End
+7/11/2022 7:36:33 AM Project Backuped 1 of 1
+7/11/2022 7:36:56 AM Starting Backup
+7/11/2022 7:36:56 AM 2 Projects Found To Backup
+7/11/2022 7:36:56 AM Started Backup Of Codat
+7/11/2022 7:36:56 AM Project Codat found on D:\hunain\codatApi\CodatApi\bin\Release\net5.0
+7/11/2022 7:36:56 AM Creating Backup Directory Of Codat
+7/11/2022 7:36:56 AM Backup Already Exist Of Something
+7/11/2022 7:36:56 AM Start Ziping Of Codat
+7/11/2022 7:36:57 AM Ziping Complete Of Codat
+7/11/2022 7:36:57 AM Backup Done Of Codat
+7/11/2022 7:36:57 AM Backup Process End
+7/11/2022 7:36:57 AM Project Backuped 1 of 2

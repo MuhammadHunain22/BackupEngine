@@ -7,11 +7,13 @@ namespace BackupEngine
     public partial class RollBack : Form
     {
         private readonly DBContext context;
+        private readonly Home _home;
         private int totalProjectToRollback = 0;
         private int ProjectRollbacked = 0;
-        public RollBack()
+        public RollBack(Home home)
         {
             context = new DBContext();
+            _home = home;
             InitializeComponent();
             StartRollback();
         }
@@ -31,8 +33,8 @@ namespace BackupEngine
 
                 totalProjectToRollback = projects.Rows.Count;
                 List<DataRow> projectList = await Task.Run(() => projects.AsEnumerable().ToList());
-                
-               await Rollback(projectList);
+
+                await Rollback(projectList);
             }
             catch (Exception ex)
             {
@@ -43,6 +45,7 @@ namespace BackupEngine
                 Logger.Log("Rollback Process End", RollbackLogList, LogType.Normal);
                 Logger.Log($"Project Rollbacked {ProjectRollbacked} of {totalProjectToRollback}", RollbackLogList, LogType.Normal);
                 MessageBox.Show("Rollback Completed Successfully", "Backup Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _home.GetRollBacks();
             }
         }
 
@@ -56,6 +59,7 @@ namespace BackupEngine
             int i = 0;
             await Parallel.ForEachAsync(projectList, parallelOptions, async (project, token) =>
             {
+                bool IsSuccessful = false;
                 try
                 {
                     Logger.Log($"Started RollBack Of {project?.ItemArray[1]?.ToString()}", RollbackLogList, LogType.Normal);
@@ -83,7 +87,7 @@ namespace BackupEngine
                     {
                         await archive.ExtractToDirectory($@"{project?.ItemArray[2]?.ToString()}");
                     }
-
+                    IsSuccessful = true;
                     i++;
                     await Task.Run(() => UpdateProgress(i, projectList.Count));
                     Logger.Log($"Unziping Complete Of {project?.ItemArray[1]?.ToString()}", RollbackLogList, LogType.Normal);
@@ -99,6 +103,11 @@ namespace BackupEngine
                 {
                     _ = ex.Message;
                     Logger.Log(ex.Message, ExpLogRollback, LogType.Exception);
+                }
+                finally
+                {
+                    int success = IsSuccessful ? 1 : 0;
+                    await Task.Run(() => context.Query($"INSERT INTO Rollbacks(Project,RollbackDate,Successful) VALUES('{project?.ItemArray[1]?.ToString()}','{DateTime.Now}',{success})"));
                 }
             });
         }

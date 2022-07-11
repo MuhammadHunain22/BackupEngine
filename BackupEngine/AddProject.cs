@@ -65,7 +65,7 @@ namespace BackupEngine
                 Close();
                 return;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 _ = ex.Message;
             }

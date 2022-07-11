@@ -76,7 +76,7 @@ namespace BackupEngine
             var confirmResult = MessageBox.Show("Are you sure you want to start backup ?","Projects Backup" ,MessageBoxButtons.YesNo,MessageBoxIcon.Question);
             if (confirmResult == DialogResult.Yes)
             {
-                 new Backup().ShowDialog();
+                 new Backup(this).ShowDialog();
             }
             else
             {
@@ -89,7 +89,7 @@ namespace BackupEngine
             var confirmResult = MessageBox.Show("Are you sure you want to start rollback ?", "Projects Rollback", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (confirmResult == DialogResult.Yes)
             {
-                new RollBack().ShowDialog();
+                new RollBack(this).ShowDialog();
             }
             else
             {
