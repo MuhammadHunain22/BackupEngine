@@ -23,6 +23,7 @@ namespace BackupEngine
             catch (Exception ex)
             {
                 _ = ex.Message;
+                Logger.Log(ex.Message,null,LogType.Exception);
             }
         }
 
@@ -35,6 +36,7 @@ namespace BackupEngine
             catch (Exception ex)
             {
                 _ = ex.Message;
+                Logger.Log(ex.Message, null, LogType.Exception);
             }
         }
 
@@ -47,6 +49,7 @@ namespace BackupEngine
             catch (Exception ex)
             {
                 _ = ex.Message;
+                Logger.Log(ex.Message, null, LogType.Exception);
             }
         }
         public void GetBackups()
@@ -58,6 +61,7 @@ namespace BackupEngine
             catch (Exception ex)
             {
                 _ = ex.Message;
+                Logger.Log(ex.Message, null, LogType.Exception);
             }
         }
         public void GetRollBacks()
@@ -69,31 +73,48 @@ namespace BackupEngine
             catch (Exception ex)
             {
                 _ = ex.Message;
+                Logger.Log(ex.Message, null, LogType.Exception);
             }
         }
         private void Backup_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show("Are you sure you want to start backup ?","Projects Backup" ,MessageBoxButtons.YesNo,MessageBoxIcon.Question);
-            if (confirmResult == DialogResult.Yes)
+            try
             {
-                 new Backup(this).ShowDialog();
+                var confirmResult = MessageBox.Show("Are you sure you want to start backup ?", "Projects Backup", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    new Backup(this).ShowDialog();
+                }
+                else
+                {
+                    return;
+                }
             }
-            else
+            catch(Exception ex)
             {
-                return;
+                _ = ex.Message;
+                Logger.Log(ex.Message, null, LogType.Exception);
             }
         }
 
         private void RollbackBtn_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show("Are you sure you want to start rollback ?", "Projects Rollback", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (confirmResult == DialogResult.Yes)
+            try
             {
-                new RollBack(this).ShowDialog();
+                var confirmResult = MessageBox.Show("Are you sure you want to start rollback ?", "Projects Rollback", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    new RollBack(this).ShowDialog();
+                }
+                else
+                {
+                    return;
+                }
             }
-            else
+            catch( Exception ex)
             {
-                return;
+                _ = ex.Message;
+                Logger.Log(ex.Message, null, LogType.Exception);
             }
         }
     }

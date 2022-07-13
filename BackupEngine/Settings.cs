@@ -25,10 +25,10 @@ namespace BackupEngine
                 }catch (Exception ex)
                 {
                     _ = ex.Message;
+                    Logger.Log(ex.Message, null, LogType.Exception);
                     continue;
                 }
             }
-
         }
 
         private async void CheckBoxChanged(object sender,EventArgs e)
@@ -41,6 +41,7 @@ namespace BackupEngine
             }catch(Exception ex)
             {
                 _ = ex.Message;
+                Logger.Log(ex.Message, null, LogType.Exception);
             }
         }
 
